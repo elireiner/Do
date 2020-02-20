@@ -4,20 +4,21 @@ import DoList from './DoList/DoList'
 
 class App extends Component {
   state = {
-    toDos: []
+    ToDos: []
   }
 
   handleSubmit = (e) => {
     e.preventDefault()
-    const toDo = {name: e.target.add.value}
-    this.setState({toDos: this.state.toDos.push(toDo) })
-    console.log(this.state.toDos)
-}
+    const newToDo = { name: e.target.add.value }
+    const toDos = this.state.ToDos.concat(newToDo)
+    this.setState({ ToDos: toDos })
+    console.log(this.state.ToDos)
+  }
   render() {
     return (
       <>
-      <AddForm handleSubmit={this.handleSubmit}/>
-      <DoList/>
+        <AddForm handleSubmit={this.handleSubmit} />
+        <DoList />
       </>
     )
   }
