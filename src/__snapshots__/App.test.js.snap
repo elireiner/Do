@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App renders UI as expected 1`] = `
+Array [
+  <form
+    onSubmit={[Function]}
+  >
+    <label>
+      Add to do:
+      <input
+        name="add"
+      />
+    </label>
+    <button
+      type="submit"
+    >
+      Add Do To
+    </button>
+  </form>,
+  <ul />,
+]
+`;
