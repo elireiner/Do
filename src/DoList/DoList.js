@@ -6,7 +6,7 @@ class DoList extends Component {
     render() {
         return (
             <ul>
-                {this.props.ToDoList.map((ToDo) => (<ToDo>{ToDo.name}</ToDo>))}
+                {this.props.ToDoList.map((ToDo) => (<ToDo name={ToDo.name}/>))}
             </ul>
         )
     }
