@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddForm renderer UI as expected 1`] = `
+<form>
+  <label>
+    Add to do:
+    <input
+      name="add"
+    />
+  </label>
+  <button
+    type="submit"
+  >
+    Add Do To
+  </button>
+</form>
+`;
