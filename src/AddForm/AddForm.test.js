@@ -11,8 +11,8 @@ describe('AddForm', () => {
         ReactDOM.unmountComponentAtNode(div)
     })
     it('renderer UI as expected', () => {
-        const tree = renderer.create(<AddForm/>).toJSON();
-        expect(tree).toMatchSnapShot
+        const tree = renderer.create(<AddForm />).toJSON();
+        expect(tree).toMatchSnapshot();
     })
     it('calls handleSubmit when button is clicked', () => {
         const mockFunction = jest.fn()
