@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import AddForm from './AddForm/AddForm'
-import DoList from './DoList/DoList'
+import AddForm from './AddForm/AddForm';
+import DoList from './DoList/DoList';
 
 class App extends Component {
   state = {
