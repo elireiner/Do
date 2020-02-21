@@ -17,7 +17,7 @@ describe('AddForm', () => {
     it('calls handleSubmit when button is clicked', () => {
         const mockFunction = jest.fn()
         const wrapper = shallow((<AddForm handleSubmit={mockFunction}/>));
-        wrapper.find('button').simulate('click');
+        wrapper.find('form').simulate('submit');
         expect(mockFunction.mock.calls.length).toEqual(1);
     })
 })
