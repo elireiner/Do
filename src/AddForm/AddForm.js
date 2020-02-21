@@ -8,7 +8,7 @@ export default class AddForm extends Component{
                 <label>
                     <input name="add"/>
                 </label>
-                <button>Add Do To</button>
+                <button type="submit">Add Do To</button>
             </form>
         )
     }
