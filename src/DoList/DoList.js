@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
+import ToDo from '../ToDo/ToDo';
 
-class DoList extends Component{
-     
-    render(){
-    
-        return(
+class DoList extends Component {
+
+    render() {
+        return (
             <ul>
-             {this.props.ToDoList.map((ToDo) => (
-            <li>{ToDo.name}</li>)
-        )}
+                {this.props.ToDoList.map((ToDo) => (<ToDo>{ToDo.name}</ToDo>))}
             </ul>
         )
     }
