@@ -27,8 +27,8 @@ class App extends Component {
       <>
       {console.log('hi')}
         <Context.Provider value={value}>
-          <Route exact path="/" Component={DoList} />
-          <Route path="/AddForm" Component={AddForm} />
+          <Route exact path="/" component={DoList} />
+          <Route path="/AddForm" component={AddForm} />
         </Context.Provider>
 
       </>
