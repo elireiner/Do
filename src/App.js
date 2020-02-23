@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import AddForm from './AddForm/AddForm';
+import { Route } from 'react-router-dom';
 import DoList from './DoList/DoList';
+import Context from './Context'
 
 class App extends Component {
   state = {
@@ -12,15 +14,23 @@ class App extends Component {
     const newToDo = { name: e.target.add.value }
     const ToDoList = this.state.ToDoList.concat(newToDo)
     this.setState({ ToDoList: ToDoList }, () => {
-       console.log(this.state.ToDoList)
+      console.log(this.state.ToDoList)
     })
   }
 
   render() {
+    const value = {
+      ToDoList: this.state.ToDoList,
+      handleSubmit: this.handleSubmit
+    }
     return (
       <>
-        <AddForm handleSubmit={this.handleSubmit} />
-        <DoList ToDoList={this.state.ToDoList}/>
+      {console.log('hi')}
+        <Context.Provider value={value}>
+          <Route exact path="/" Component={DoList} />
+          <Route path="/AddForm" Component={AddForm} />
+        </Context.Provider>
+
       </>
     )
   }
