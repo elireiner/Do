@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import ToDo from '../ToDo/ToDo';
 
 class DoList extends Component {
-
+    static defaultProps = {
+        ToDoList: []
+    }
     render() {
         return (
             <ul>
