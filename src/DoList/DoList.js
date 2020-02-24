@@ -16,10 +16,12 @@ class DoList extends Component {
 
         return (
             <>
-            <ul>
-                {ToDoList.map((item) => (<ToDo name={item.name} />))}
-            </ul>
-            <Link to={`/AddForm`}>Add ToDo</Link>
+                {ToDoList.length > 0 &&
+                    <ul>
+                        {ToDoList.map((item) => (<ToDo name={item.name} />))}
+                    </ul>}
+
+                <Link to={`/AddForm`}>Add ToDo</Link>
             </>
         )
     }
